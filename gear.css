@@ -1,0 +1,38 @@
+.gear {
+    width: 231px;
+    height: 184px;
+}
+
+.gear-svg {
+    width: 116px;
+    height: 124px;
+    fill: var(--prymary_color);
+}
+
+.gear-svg-top {
+    animation-name: gear-top;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.gear-svg-bottom {
+    position: relative;
+    left: 111px;
+    bottom: 63px;
+    transform: rotate(30deg);
+    animation-name: gear-bottom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes gear-top {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(180deg);}
+}
+
+@keyframes gear-bottom {
+    from {transform: rotate(30deg);}
+    to {transform: rotate(-150deg);}
+}

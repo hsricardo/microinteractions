@@ -1,0 +1,67 @@
+.hourglass {
+    background-image: url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 139 184' %3E%3Cpath d='M0.272369 11.5C0.272369 5.14984 5.42221 0 11.7724 0H126.772C133.133 0 138.272 5.14984 138.272 11.5C138.272 17.8502 133.133 23 126.772 23V26.9459C126.772 42.1906 120.699 56.8172 109.918 67.5984L85.5521 92L109.918 116.402C120.699 127.183 126.772 141.809 126.772 157.047V161C133.133 161 138.272 166.139 138.272 172.5C138.272 178.861 133.133 184 126.772 184H11.7724C5.42221 184 0.272369 178.861 0.272369 172.5C0.272369 166.139 5.42221 161 11.7724 161V157.047C11.7724 141.809 17.8314 127.183 28.6127 116.402L52.9927 92L28.6127 67.5984C17.8314 56.8172 11.7724 42.1906 11.7724 26.9459V23C5.42221 23 0.272369 17.8502 0.272369 11.5ZM34.7724 23V26.9459C34.7724 36.0813 38.4021 44.8859 44.8708 51.3547L69.2724 75.7203L93.6739 51.3547C100.143 44.8859 103.772 36.0813 103.772 26.9459V23H34.7724ZM34.7724 161H103.772V157.047C103.772 147.919 100.143 139.114 93.6739 132.645L69.2724 108.28L44.8708 132.645C38.4021 139.114 34.7724 147.919 34.7724 157.047V161Z' fill='%231D1D1D' /%3E%3C/svg%3E");
+    width: 139px;
+    height: 184px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    animation-name: hourglass-frame;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.hourglass-clip-top {
+    width: 75px;
+    height: 3px;
+    clip-path: url(#hourglass-clip-top);
+    margin-top: 20px;
+}
+
+.hourglass-background-top {
+    background-color: var(--prymary_color);
+    width: 100%;
+
+    animation-name: hourglass-background-top;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.hourglass-clip-bottom {
+    width: 75px;
+    height: 59px;
+    clip-path: url(#hourglass-clip-bottom);
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.hourglass-background-bottom {
+    background-color: var(--prymary_color);
+    width: 100%;
+
+    animation-name: hourglass-background-bottom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes hourglass-frame {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(180deg);}
+}
+
+@keyframes hourglass-background-top {
+    0% {height: 3px;}
+    50% {height: 3px;}
+    100% {height: 59px;}
+}
+
+@keyframes hourglass-background-bottom {
+    0% {height: 59px;}
+    50% {height: 59px;}
+    100% {height: 3px;}
+}
